@@ -3,7 +3,7 @@
   
   #### Repository created to help me learn the C language.
 
-  *Below you will find some projects that I created to practice.
+  *Below you will find some projects that I created to practice.*
   
   ---
 </div>
