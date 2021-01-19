@@ -5,6 +5,7 @@
 
 #define MAX 50
 #define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_WHITE   "\x1b[1;37m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
@@ -28,8 +29,10 @@ void menu() {
 };
 
 struct pessoa criar() {
-  system("cls");
   struct pessoa usuario;
+  char deseja_endereco[2];
+
+  system("cls");
   printf(ANSI_COLOR_WHITE"CADASTRO"ANSI_COLOR_RESET"\n\n");
 
   printf("Nome: ");
@@ -43,6 +46,34 @@ struct pessoa criar() {
   printf("Peso: ");
   scanf("%f", &usuario.peso);
 
+  printf("Deseja cadastrar endereco [S/N]? ");
+    
+  while(1) {
+    fgets(deseja_endereco, 2, stdin);
+    fgets(deseja_endereco, 2, stdin);
+    if (*deseja_endereco != 's' &&
+        *deseja_endereco != 'S' &&
+        *deseja_endereco != 'n' &&
+        *deseja_endereco != 'N')
+    {
+      printf(ANSI_COLOR_YELLOW"Opcao invalida!"ANSI_COLOR_RESET"\n");
+    }
+    else {
+      break;
+    }
+  }
+
+  if (*deseja_endereco == 's' || *deseja_endereco == 'S') {
+    goto cadastrar_endereco;
+  }
+  else if (*deseja_endereco == 'n' || *deseja_endereco == 'N') {
+    strcpy(usuario.endereco.rua, "Sem rua");
+    usuario.endereco.numero = 0;
+    goto end;
+  }
+
+
+  cadastrar_endereco:
   printf("\nEndereco: \n");
   printf("> Rua: ");
   fgets(usuario.endereco.rua, MAX, stdin);
@@ -53,47 +84,124 @@ struct pessoa criar() {
   printf("> Numero: ");
   scanf("%d", &usuario.endereco.numero);
 
-
+  end:
+  printf("\n" ANSI_COLOR_GREEN "Usuario cadastrado!" ANSI_COLOR_RESET "\n" );
   return usuario;
 }
 
 void ver(struct pessoa *lista, int len) {
-  int i;
+  while (1) {
+    int i, usuario;
+    char deseja_lista[2];
+    system("cls");
+    printf(ANSI_COLOR_WHITE"LISTA DE CADASTRADOS"ANSI_COLOR_RESET"\n\n");
+
+    if (len == 0) {
+      printf("Sem usuarios para listar!\n");
+      return;
+    }
+
+    for(i = 0; i < len; i++) {
+      printf("[%d] %s\n", i, lista[i].nome);
+    }
+    printf("\n");
+
+    printf("Deseja ver os dados de qual usuario? [99 para retornar ao menu]\n");
+    printf("> ");
+  
+    while(1) {
+      scanf("%d", &usuario);
+
+      if ((usuario > len && usuario != 99) || usuario < 0) {
+        printf(ANSI_COLOR_YELLOW"Opcao invalida! Tente novamente: "ANSI_COLOR_RESET"\n");
+      }
+      else if (usuario == 99) {
+        return;
+      }
+      else {
+        break;
+      }
+    }
+
+    system("cls");
+    printf("\n"ANSI_COLOR_WHITE"==== DADOS DE %s ===="ANSI_COLOR_RESET"\n", (lista[usuario].nome));
+    printf("%-10s %s\n","Nome:", lista[usuario].nome);
+    printf("%-10s %d\n","Idade:", lista[usuario].idade);
+    printf("%-10s %.1f\n","Peso:", lista[usuario].peso);
+    if (lista[usuario].endereco.numero == 0) {
+      printf("%-10s\n", "\n> Endereco nao cadastrado\n");
+    } else {
+      printf("\nEndereco:\n");
+      printf("%-10s %s\n", "> Rua:", lista[usuario].endereco.rua);
+      printf("%-10s %d\n", "> Numero:", lista[usuario].endereco.numero);
+    }
+
+    char menu[1];
+    printf("Deseja voltar a lista de usuarios [S/N]? ");
+    while(1) {
+      fgets(deseja_lista, 2, stdin);
+      fgets(deseja_lista, 2, stdin);
+      if (*deseja_lista != 's' &&
+          *deseja_lista != 'S' &&
+          *deseja_lista != 'n' &&
+          *deseja_lista != 'N')
+      {
+        printf(ANSI_COLOR_YELLOW"Opcao invalida!"ANSI_COLOR_RESET"\n");
+      }
+      else {
+        break;
+      }
+    }
+
+    if (*deseja_lista == 's' || *deseja_lista == 'S') {
+      printf("Voltando a lista...");
+      Sleep(1000);
+      continue;
+    }
+    else if (*deseja_lista == 'n' || *deseja_lista == 'N') {
+      return;
+    }
+  }
+}
+
+void deletar(struct pessoa *lista, int len) {
+  int i, usuario;
+
   system("cls");
-  printf(ANSI_COLOR_WHITE"LISTA DE CADASTRADOS"ANSI_COLOR_RESET"\n");
-
-  //FORMATO DE LISTA
-
-  for(i = 0; i < len; i++) {
-    printf("\n"ANSI_COLOR_WHITE"==== PESSOA %d ===="ANSI_COLOR_RESET"\n", i+1);
-    printf("%-10s %s\n","Nome:", lista[i].nome);
-    printf("%-10s %d\n","Idade:", lista[i].idade);
-    printf("%-10s %.1f\n","Peso:", lista[i].peso);
-    printf("\nEndereco:\n");
-    printf("%-10s %s\n", "> Rua:", lista[i].endereco.rua);
-    printf("%-10s %d\n", "> Numero:", lista[i].endereco.numero);
+  printf(ANSI_COLOR_WHITE"QUAL USUARIO DESEJA DELETAR?"ANSI_COLOR_RESET"\n\n");
+  
+  if (len == 0) {
+    printf("Sem usuarios para remover!\n");
+    return;
   }
 
-  //FORMATO DE TABELA
+  for(i = 0; i < len; i++) {
+    printf("[%d] %s\n", i, lista[i].nome);
+  }
+  printf("\n");
 
-  // printf("%-7s| %-20s| %-6s| %-5s| %-15s| %-7s\n", "Pessoa", "Nome", "Idade", "Peso", "Rua", "Numero");
-  // for (int l = 0; l < 79; l++ ) {
-  //   printf("=");
-  // }
-  // printf("\n");
-  // for(i = 0; i < len; i++) {
-  //   printf("%-7d| ", i+1);
-  //   printf("%-20s| ", lista[i].nome);
-  //   printf("%-6d| ", lista[i].idade);
-  //   printf("%-5.1f| ", lista[i].peso);
-  //   printf("%-15s| ", lista[i].endereco.rua);
-  //   printf("%-7d\n", lista[i].endereco.numero);
-  // }
+  printf("Numero do usuario: ");
+  while(1) {
+    scanf("%d", &usuario);
 
-  char menu[1];
-  printf("\nInsira"ANSI_COLOR_WHITE" qualquer tecla "ANSI_COLOR_RESET"para retornar ao menu.\n");
-  scanf("%s",&menu);
+    if (usuario > len || usuario < 0) {
+      printf(ANSI_COLOR_YELLOW"Opcao invalida! Tente novamente: "ANSI_COLOR_RESET"\n");
+    }
+    else {
+      break;
+    }
+  }
 
+  for (i = 0; i < len; i++) {
+    if (i == usuario) {
+      *(lista+i) = lista[i + 1];
+    }
+  }
+
+  printf("\n"ANSI_COLOR_RED "Usuario removido!" ANSI_COLOR_RESET "\n" );
+  if (len <= 0) {
+    len = 0;
+  }
 }
 
 int main() {
@@ -102,16 +210,15 @@ int main() {
 
  for (;;) {
     menu();
-    int opcao, i, usuario;
+    int opcao, i;
     
     escolherOpcao:
-    printf("Escolha uma opcao: ");
+    printf("Escolha uma opcao: ", size);
     scanf("%d", &opcao);
 
     switch (opcao) {
       case 1:
         pessoas[size] = criar();
-        printf("\n" ANSI_COLOR_GREEN "Usuario cadastrado!" ANSI_COLOR_RESET "\n" );
         size++;
         break;
 
@@ -120,37 +227,16 @@ int main() {
         break;
 
       case 3:
-        system("cls");
-        printf(ANSI_COLOR_WHITE"QUAL USUARIO DESEJA DELETAR?"ANSI_COLOR_RESET"\n\n");
-        
-        for(i = 0; i < size; i++) {
-          printf("[%d] %s\n", i, pessoas[i].nome);
-        }
-        printf("\n");
-
-        printf("Numero do usuario: ");
-        while(1) {
-          scanf("%d", &usuario);
-          if (usuario > size || usuario < 0) {
-            printf("Opcao invalida!\n");
-          }
-          else {
-            break;
-          }
-        }
-
-        for (i = 0; i < size; i++) {
-          if (i == usuario) {
-            pessoas[i] = pessoas[i + 1];
-          }
-        }
-        printf("\n"ANSI_COLOR_RED "Usuario removido!" ANSI_COLOR_RESET "\n" );
+        deletar(pessoas, size);
         size--;
+        if (size <= 0) {
+          size = 0;
+        }
         break;
 
-      case 4: printf("Saindo..."); Sleep(1000); goto exit;
+      case 4: printf("\nSaindo..."); Sleep(1000); goto exit;
 
-      default: printf("Opcao Invalida. ");goto escolherOpcao;
+      default: printf("Opcao Invalida. Tente novamente: ");goto escolherOpcao;
     }
 
     printf("Retornando ao menu...");
