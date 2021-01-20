@@ -115,6 +115,8 @@ Essas operações dependem do tipo de alocação de memória usada:
 - A "Lista" crescre à medida que novos elementos são armazenados, e diminui à medida que elementos são removidos.
 - Acesso encadeado: cada elemento pode estar em uma área distinta da memória. Para acessar um elemento, é preciso percorrer todos os seus antecessores na "Lista".
 
+**👉 Listas Implementadas:**
+- [Lista Sequencial](./estrutura_de_dados/ListaSequencial)
 <hr>
 
 ## Programa de cadastro
