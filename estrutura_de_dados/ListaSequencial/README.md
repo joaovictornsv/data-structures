@@ -1,4 +1,7 @@
 # Lista Sequencial
+[Arquivo.h](./ListaSequencial.h)<br/>
+[Arquivo.c](./ListaSequencial.c)
+<hr>
 
 ## ✏ Definição:
 "Lista Sequencial Estática" ou "Lista Linear Estática":
