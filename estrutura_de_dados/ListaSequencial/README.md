@@ -1,6 +1,9 @@
 # Lista Sequencial
 [Arquivo.h](./ListaSequencial.h)<br/>
 [Arquivo.c](./ListaSequencial.c)
+
+ <img src="https://miro.medium.com/max/1300/1*ejbj1auh_Nxg_kmuuSGUSA.jpeg" width=70%/>
+
 <hr>
 
 ## ✏ Definição:
