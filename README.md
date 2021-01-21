@@ -22,7 +22,6 @@
 ### Tipos Abstratos de Dados (TAD):
 - [x] Listas lineares
 - [x] Sequencial
-- [ ] Encadeada
 - [ ] Simplesmente Encadeada
 - [ ] Duplamente Encadeada
 - [ ] Pilhas
