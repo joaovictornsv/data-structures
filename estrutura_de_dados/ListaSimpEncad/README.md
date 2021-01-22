@@ -1,6 +1,6 @@
 # Lista Simplesmente Encadeada
-[Arquivo.h](./ListaDinEncad.h)<br/>
-[Arquivo.c](./ListaDinEncad.c)
+[Arquivo.h](./ListaSimpEncad.h)<br/>
+[Arquivo.c](./ListaSimpEncad.c)
 <hr>
 
 ## ✏ Definição:
