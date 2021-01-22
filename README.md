@@ -22,7 +22,7 @@
 ### Tipos Abstratos de Dados (TAD):
 - [x] Listas lineares
 - [x] Sequencial
-- [ ] Simplesmente Encadeada
+- [x] Simplesmente Encadeada
 - [ ] Duplamente Encadeada
 - [ ] Pilhas
 - [ ] Filas
@@ -116,6 +116,7 @@ Essas operações dependem do tipo de alocação de memória usada:
 
 **👉 Listas Implementadas:**
 - [Lista Sequencial](./estrutura_de_dados/ListaSequencial)
+- [Lista Simplesmente Encadeada](./estrutura_de_dados/ListaSimpEncad)
 <hr>
 
 ## Programa de cadastro
