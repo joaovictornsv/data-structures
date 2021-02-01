@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Estrutura de Dados em <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"  alt="c" height=28/></h1>
+  <h1>Estrutura de Dados em <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"  alt="c" height=30/></h1>
   
   #### Repositório criado para auxiliar nos meus estudos em C e na disciplina de Estrutura de Dados.
   *Conteúdo retirado do canal [Linguagem C Programação Descomplicada](https://www.youtube.com/channel/UCUc6UwvpQfOLDE7e52-OCMw)*
