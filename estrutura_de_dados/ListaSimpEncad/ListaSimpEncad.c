@@ -71,7 +71,8 @@ int insercao_lista_inicio(Lista* li, struct aluno al) {
   no->dados = al;
   no->prox = *li;
   *li = no;
-
+  
+  return 1;
 }
 
 int insercao_lista_final(Lista* li, struct aluno al) {
@@ -85,7 +86,6 @@ int insercao_lista_final(Lista* li, struct aluno al) {
 
   no->dados = al;
   no->prox = NULL;
-
 
   if ((*li) == NULL) {
     *li = no;
