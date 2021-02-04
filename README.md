@@ -23,7 +23,7 @@
 - [x] Listas lineares
 - [x] Sequencial
 - [x] Simplesmente Encadeada
-- [ ] Duplamente Encadeada
+- [x] Duplamente Encadeada
 - [ ] Pilhas
 - [ ] Filas
 - [ ] Sequencial Circular
@@ -117,6 +117,7 @@ Essas operações dependem do tipo de alocação de memória usada:
 **👉 Listas Implementadas:**
 - [Lista Sequencial](./estrutura_de_dados/ListaSequencial)
 - [Lista Simplesmente Encadeada](./estrutura_de_dados/ListaSimpEncad)
+- [Lista Duplamente Encadeada](./estrutura_de_dados/ListaDuplaEncad)
 <hr>
 
 ## Programa de cadastro
