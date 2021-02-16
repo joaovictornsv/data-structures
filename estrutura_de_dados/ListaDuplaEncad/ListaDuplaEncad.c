@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 struct elemento {
-  int *ant;
+  struct elemento *ant;
   struct aluno dados;
-  int *prox;
+  struct elemento *prox;
 };
 
 typedef struct elemento Elem;

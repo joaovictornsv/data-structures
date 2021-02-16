@@ -3,7 +3,7 @@
 
 struct elemento {
   struct aluno dados;
-  int *prox;
+  struct elemento *prox;
 };
 
 typedef struct elemento Elem;
