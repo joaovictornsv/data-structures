@@ -18,15 +18,16 @@ Lista* cria_lista() {
 }
 
 void libera_lista(Lista* li) {
-  if ((*li) != NULL) {
-    Elem* no;
+  if (li != NULL && (*li) != NULL) {
+    Elem *aux, *no = *li;
 
-    while (no != NULL) {
-      no = *li;
-      *li == (*li)->prox;
-      free(no);
+    while (*(li) != no->prox) {
+      aux = no;
+      no = no->prox;
+      free(aux);
     }
 
+    free(no);
     free(li);
   }
 }
