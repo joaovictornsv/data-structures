@@ -1,11 +1,15 @@
 # Lista Circular
-[Arquivo.h](./ListaDuplaEncad.h)<br/>
-[Arquivo.c](./ListaDuplaEncad.c)
+[Arquivo.h](./ListaCircular.h)<br/>
+[Arquivo.c](./ListaCircular.c)
 <hr>
 
 ## ✏ Definição:
 "Lista Circular":
-Tipo de "Lista" onde cada elemento aponta para o seu sucessor na e antecessor na "lista". Usa um ponteiro especial para o primeiro elemento da lista e uma indicação de final de lista, nos dois sentidos.
+Tipo de "Lista" onde cada elemento aponta para o seu sucessor e o último elemento aponta para o primeira da "lista".
+
+- Usa um ponteiro especial para o primeiro elemento da lista.
+- Não existe uma indicação de final de lista
+
 <br/>
 - Cada elemento é tratado como um ponteiro que é **alocado dinamicamente** a medida que os dados são inseridos.
 - Para guardar o primeiro elemento, utilizamos um **"ponteiro para ponteiro".**
@@ -16,17 +20,20 @@ Tipo de "Lista" onde cada elemento aponta para o seu sucessor na e antecessor na
 ## ✅ Vantagens:
 - Melhor utilização dos recursos de memória.
 - Não precisa movimentar os elementos nas operações de inserção e remoção.
+- Possibilidade de percorrer a lista diversas vezes
+- Não precisamos considerar casos especiais de inclusão e remoção de elementos (primeiro e último).
 <hr>
 
 ## ❌ Desvantagens do uso de arrays:
 - Acesso indireto aos elementos.
 - Necessidade de percorrer a lista para acessar um elemento.
+- Lista não possui final definido.
 <hr>
 
 ## 💡 Quando utilizar essa "Lista"?
 - Não há necessidade de garantir um espaço mínimo para a execução do aplicativo.
 - Inserção/remoção em lista ordenada são as operações mais frequente.
-- Necessidade de acessar informação de um elemento antecessor.
+- Quando a necessidade de voltar ao primeiro item da lista depois de percorrê-la.
 <hr>
 
 ## 🛠 Implementação:
@@ -56,5 +63,7 @@ Os 3 tipos de remoção trabalham juntos. A remoção sempre remove um elemento 
 - Removendo o último nó, a lista fica vazia.
 
 ### 🔍 Consulta:
-- pela posição (necessidade de busca)
-- pelo conteúdo (necessidade de busca)
+- pela posição
+- pelo conteúdo
+
+Ambos dependem de busca (percorrer os elementos) até encontrar o desejado.

@@ -23,7 +23,7 @@
 - [x] Lista Sequencial
 - [x] Lista Simplesmente Encadeada
 - [x] Lista Duplamente Encadeada
-- [ ] Lista Encadeada Circular
+- [x] Lista Encadeada Circular
 - [ ] Pilhas
 - [ ] Filas
 
