@@ -235,3 +235,35 @@ int remocao_lista_meio(Lista* li, int mat) {
     return 1;
   }
 }
+
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al) {
+  if (li == NULL || *li == NULL || pos <= 0) return 0;
+
+  Elem* no = *li;
+  int cont = 0;
+  while(no->prox != (*li) && cont < pos) {
+    no = no->prox;
+    cont++;
+  }
+
+  if(cont != pos) return 0; //elemento nao encontrado
+  else {
+    *al = no->dados;
+    return 1;
+  }
+}
+
+int consulta_lista_mat(Lista* li, int mat, struct aluno *al) {
+  if (li == NULL || *li == NULL) return 0;
+
+  Elem* no = *li;
+  while(no->prox != (*li) && no->dados.matricula != mat)
+    no = no->prox;
+
+  if(no->dados.matricula != mat) //elemento nao encontrado
+    return 0;
+  else {
+    *al = no->dados;
+    return 1;
+  }
+}

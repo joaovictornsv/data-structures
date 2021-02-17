@@ -27,3 +27,7 @@ int remocao_lista_inicio(Lista* li);
 int remocao_lista_final(Lista* li);
 
 int remocao_lista_meio(Lista* li, int mat);
+
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
+
+int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
