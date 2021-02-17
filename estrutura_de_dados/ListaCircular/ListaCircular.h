@@ -15,3 +15,9 @@ int tamanho_lista(Lista* li);
 int lista_cheia(Lista* li);
 
 int lista_vazia(Lista* li);
+
+int insercao_lista_inicio(Lista* li, struct aluno al);
+
+int insercao_lista_final(Lista* li, struct aluno al);
+
+int insercao_lista_ordenada(Lista* li, struct aluno al);
