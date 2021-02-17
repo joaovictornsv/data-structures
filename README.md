@@ -20,13 +20,12 @@
 - [x] Alocação dinânima de memória
 
 ### Tipos Abstratos de Dados (TAD):
-- [x] Listas lineares
-- [x] Sequencial
-- [x] Simplesmente Encadeada
-- [x] Duplamente Encadeada
+- [x] Lista Sequencial
+- [x] Lista Simplesmente Encadeada
+- [x] Lista Duplamente Encadeada
+- [ ] Lista Encadeada Circular
 - [ ] Pilhas
 - [ ] Filas
-- [ ] Sequencial Circular
 
 ### Árvores:
 - [ ] Conceitos básicos
