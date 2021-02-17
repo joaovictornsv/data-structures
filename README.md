@@ -24,9 +24,9 @@
 - [x] Sequencial
 - [x] Simplesmente Encadeada
 - [x] Duplamente Encadeada
+- [ ] Encadeada Circular
 - [ ] Pilhas
 - [ ] Filas
-- [ ] Sequencial Circular
 
 ### Árvores:
 - [ ] Conceitos básicos
