@@ -21,3 +21,9 @@ int insercao_lista_inicio(Lista* li, struct aluno al);
 int insercao_lista_final(Lista* li, struct aluno al);
 
 int insercao_lista_ordenada(Lista* li, struct aluno al);
+
+int remocao_lista_inicio(Lista* li);
+
+int remocao_lista_final(Lista* li);
+
+int remocao_lista_meio(Lista* li, int mat);

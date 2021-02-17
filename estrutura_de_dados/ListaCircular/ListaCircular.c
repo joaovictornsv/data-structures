@@ -151,3 +151,87 @@ int insercao_lista_ordenada(Lista* li, struct aluno al) {
     return 1;
   }
 }
+
+int remocao_lista_inicio(Lista * li) {
+  if (li == NULL || (*li) == NULL) return 0;
+
+  if ((*li)->prox == (*li)) { // lista com 1 elemento
+    free(*li);
+    *li = NULL;
+    return 1;
+  }
+  else {
+    Elem* aux = *li;
+    while(aux->prox != (*li))
+      aux = aux->prox;
+
+    Elem* no = *li;
+    aux->prox = no->prox;
+    *li = no->prox;
+    free(no);
+    return 1;
+  }
+}
+
+int remocao_lista_final(Lista* li) {
+  if (li == NULL || (*li) == NULL) return 0;
+
+  if ((*li)->prox == (*li)) { // lista com 1 elemento
+    free(*li);
+    *li = NULL;
+    return 1;
+  }
+
+  else {
+    Elem* ant = *li, *atual = (*li)->prox;
+
+    while(atual->prox != (*li)) { //procura o último
+      ant = atual;
+      atual = atual->prox;  
+    }
+
+    ant->prox = atual->prox;
+    free(atual);
+    return 1;
+  }
+}
+
+int remocao_lista_meio(Lista* li, int mat) {
+  if (li == NULL || (*li) == NULL) return 0;
+
+  Elem* no = *li;
+  if(no->dados.matricula == mat) { //remove inicio
+    if (no->prox == no){ // lista com 1 elemento
+      free(no);
+      *li = NULL;
+      return 1;
+    }
+
+    else {
+      Elem *aux = *li;
+      while(aux->prox != no) //procura o ultimo
+        aux = aux->prox;
+
+      aux->prox = (*li)->prox;
+      *li = (*li)->prox;
+      free(no);
+      return 1;
+    }
+    
+  }
+  else {
+    Elem *ant = no;
+    no = no->prox;
+    while(no != (*li) && no->dados.matricula != mat) {
+      ant = no;
+      no = no->prox;
+    }
+
+    if(no == (*li)) //elemento nao encontrado
+      return 0;
+
+    ant->prox = no->prox;
+    free(no);
+    return 1;
+  }
+}
