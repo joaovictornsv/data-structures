@@ -17,3 +17,9 @@ int tamanho_fila(Fila* li);
 int fila_cheia(Fila* fi);
 
 int fila_vazia(Fila* fi);
+
+int insere_fila(Fila* fi, struct aluno al);
+
+int remove_fila(Fila* fi);
+
+int consulta_Fila(Fila* fi, struct aluno *al);
