@@ -24,9 +24,9 @@
 - [x] Lista Simplesmente Encadeada
 - [x] Lista Duplamente Encadeada
 - [x] Lista Encadeada Circular
-- [ ] Pilhas
-- [ ] Fila Estática
+- [x] Fila Estática
 - [ ] Fila Dinâmica
+- [ ] Pilhas
 
 ### Árvores:
 - [ ] Conceitos básicos
