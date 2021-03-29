@@ -8,4 +8,10 @@ typedef struct descritor Fila;
 
 Fila* cria_fila();
 
-void libera_Fila(Fila* fila);
+void libera_Fila(Fila* fi);
+
+int tamanho_Fila(Fila* fi);
+
+int fila_cheia(Fila* fi);
+
+int fila_vazia(Fila* fi);

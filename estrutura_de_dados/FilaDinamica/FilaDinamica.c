@@ -39,3 +39,31 @@ void libera_Fila(Fila* fi) {
     free(fi);
   }
 }
+
+int tamanho_Fila(Fila* fi) {
+  if (fi == NULL) {
+    return 0;
+  }
+  
+  Elem* no = fi->inicio;
+  int qtd = 0;
+
+  while(no != NULL) {
+    qtd++;
+    no = no->prox;
+  }
+
+  return qtd;
+}
+
+int fila_cheia(Fila* fi) {
+  return 0;
+}
+
+int fila_vazia(Fila* fi) {
+  if (fi == NULL || fi->inicio == NULL) {
+    return 1;
+  }
+
+  return 0;
+}
