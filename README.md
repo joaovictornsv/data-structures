@@ -118,6 +118,7 @@ Essas operações dependem do tipo de alocação de memória usada:
 - [Lista Sequencial](./estrutura_de_dados/ListaSequencial)
 - [Lista Simplesmente Encadeada](./estrutura_de_dados/ListaSimpEncad)
 - [Lista Duplamente Encadeada](./estrutura_de_dados/ListaDuplaEncad)
+- [Lista Encadeada Circular](./estrutura_de_dados/ListaCircular)
 <hr>
 
 ## Programa de cadastro
