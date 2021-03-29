@@ -11,3 +11,9 @@ typedef struct fila Fila;
 Fila* cria_Fila();
 
 void libera_Fila(Fila* fi);
+
+int tamanho_fila(Fila* li);
+
+int fila_cheia(Fila* fi);
+
+int fila_vazia(Fila* fi);
