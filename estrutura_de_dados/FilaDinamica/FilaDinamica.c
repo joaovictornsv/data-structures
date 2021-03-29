@@ -67,3 +67,54 @@ int fila_vazia(Fila* fi) {
 
   return 0;
 }
+
+int insere_Fila(Fila* fi, struct aluno al) {
+  if (fi == NULL) {
+    return 0;
+  }
+
+  Elem* no = (Elem*) malloc(sizeof(Elem));
+  if (no == NULL) {
+    return 0;
+  }
+
+  no->dados = al;
+  no->prox = NULL;
+
+  if (fi->final == NULL) { //fila vazia
+    fi->inicio = no;
+  }
+
+  else {
+    fi->final->prox = no;
+  }
+
+  fi->final = no;
+  return 1;
+}
+
+int remove_Fila(Fila* fi) {
+  if (fi == NULL || fi->inicio == NULL) {
+    return 0;
+  }
+
+  Elem* no = fi->inicio;
+  fi->inicio = fi->inicio->prox;
+
+  if(fi->inicio == NULL) { //fila ficou vazia
+    fi->final = NULL;
+  }
+
+  free(no);
+
+  return 1;
+}
+
+int consulta_Fila(Fila* fi, struct aluno *al) {
+  if (fi == NULL || fi->inicio == NULL) {
+    return 0;
+  }
+
+  *al = fi->inicio->dados;
+  return 1;
+}
