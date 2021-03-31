@@ -27,7 +27,7 @@
 - [x] Fila Estática
 - [x] Fila Dinâmica
 - [x] Pilha Estática
-- [ ] Pilha Dinâmica
+- [x] Pilha Dinâmica
 
 ### Árvores:
 - [ ] Conceitos básicos
