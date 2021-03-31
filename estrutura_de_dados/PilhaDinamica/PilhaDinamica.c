@@ -30,3 +30,31 @@ void libera_Pilha(Pilha* pi) {
     free(pi);
   }
 }
+
+int tamanho_pilha(Pilha* pi) {
+  if (pi == NULL) {
+    return 0;
+  }
+
+  Elem* no = *pi;
+  int qtd = 0;
+
+  while(no != NULL) {
+    qtd++;
+    no = no->prox;
+  }
+
+  return qtd;
+}
+
+int pilha_cheia(Pilha* pi) {
+  return 0;
+}
+
+int pilha_vazia(Pilha* pi) {
+  if (pi == NULL || *pi == NULL) {
+    return 1;
+  }
+
+  return 0;
+}
