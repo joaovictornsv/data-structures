@@ -19,3 +19,35 @@ Pilha* cria_Pilha() {
 void libera_pilha(Pilha* pi) {
   free(pi);
 }
+
+int tamanho_pilha(Pilha* pi) {
+  if (pi == NULL) {
+    return -1;
+  }
+
+  return pi->qtd;
+}
+
+int pilha_cheia(Pilha* pi) {
+  if (pi == NULL) {
+    return -1;
+  }
+
+  if (pi->qtd == MAX) {
+    return 1;
+  }
+
+  return 0;
+}
+
+int pilha_vazia(Pilha* pi) {
+  if (pi == NULL) {
+    return -1;
+  }
+
+  if (pi->qtd == 0) {
+    return 1;
+  }
+
+  return 0;
+}
