@@ -26,7 +26,7 @@
 - [x] Lista Encadeada Circular
 - [x] Fila Estática
 - [x] Fila Dinâmica
-- [ ] Pilha Estática
+- [x] Pilha Estática
 - [ ] Pilha Dinâmica
 
 ### Árvores:

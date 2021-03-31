@@ -17,3 +17,9 @@ int tamanho_pilha(Pilha* pi);
 int pilha_cheia(Pilha* pi);
 
 int pilha_vazia(Pilha* pi);
+
+int insere_pilha(Pilha* pi, struct aluno al);
+
+int remove_pilha(Pilha* pi);
+
+int consulta_pilha(Pilha* pi, struct aluno *al);

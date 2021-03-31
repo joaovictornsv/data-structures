@@ -51,3 +51,33 @@ int pilha_vazia(Pilha* pi) {
 
   return 0;
 }
+
+int insere_pilha(Pilha* pi, struct aluno al) {
+  if (pi == NULL || pi->qtd == MAX) {
+    return 0;
+  }
+
+  pi->dados[pi->qtd] = al;
+  pi->qtd++;
+
+  return 1;
+}
+
+int remove_pilha(Pilha* pi) {
+  if (pi == NULL || pi->qtd == 0) {
+    return 0;
+  }
+
+  pi->qtd--;
+  return 1;
+}
+
+int consulta_pilha(Pilha* pi, struct aluno *al) {
+  if (pi == NULL || pi->qtd == 0) {
+    return 0;
+  }
+
+  *al = pi->dados[pi->qtd-1];
+
+  return 1;
+}
