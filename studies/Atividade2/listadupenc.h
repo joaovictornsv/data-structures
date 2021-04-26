@@ -78,4 +78,4 @@ int removerUltimo(TListaDupEnc* lista);
 
 
 // Função para juntar duas listas e retornar uma nova lista formada pela junção destas.
-TListaDupEnc merge(TListaDupEnc* lista1, TListaDupEnc* lista2);
+TListaDupEnc* merge(TListaDupEnc* lista1, TListaDupEnc* lista2);

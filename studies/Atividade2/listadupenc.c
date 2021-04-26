@@ -398,30 +398,37 @@ int removerUltimo(TListaDupEnc* lista) {
 /**
  * Recebe duas listas e retorna uma nova lista formada pela junção destas.
 */
-TListaDupEnc merge(TListaDupEnc* lista1, TListaDupEnc* lista2) {
+TListaDupEnc* merge(TListaDupEnc* lista1, TListaDupEnc* lista2) {
   if (lista1 == NULL || lista2 == NULL) {
     mostrarErro("Lista(s) Inválida(s).");
     return NULL;
   }
 
-  TListaDupEnc novaLista;
-  criarLista(&novaLista);
+  TListaDupEnc* novaLista = (TListaDupEnc*) malloc(sizeof(TListaDupEnc));
+  *novaLista = NULL;
+
+  if (novaLista == NULL) {
+    mostrarErro("Erro ao criar nova lista.");
+    return NULL;
+  }
 
   //Duas listas vazias => nova lista vazia
   if (*lista1 == NULL && *lista2 == NULL) {
+    *novaLista = NULL;
     return novaLista;
   }
+
 
   else {
     no *noLista1 = *lista1, *noLista2 = *lista2;
 
     while(noLista1 != NULL || noLista2 != NULL) {
       if (noLista1 != NULL) {
-        inserirNoFinal(&novaLista, noLista1->dado);
+        inserirNoFinal(novaLista, noLista1->dado);
         noLista1 = noLista1->prox;
       }
       if (noLista2 != NULL) {
-        inserirNoFinal(&novaLista, noLista2->dado);
+        inserirNoFinal(novaLista, noLista2->dado);
         noLista2 = noLista2->prox;
       }
     }

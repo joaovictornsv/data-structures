@@ -82,11 +82,11 @@ int main (void) {
   printf("\n\n\n==== Unindo listas 1 e 2 para formar a lista 3 ====\n");
 
   // Criação da lista 3
-  TListaDupEnc lista3;
+  TListaDupEnc* lista3;
 
   lista3 = merge(&lista1, &lista2);
   printf("Lista 3:");
-  imprimir(lista3); // Lista (5, 0, 2, 7, 2, 1, 4, 3, 9, 9, 2)
+  imprimir(*lista3); // Lista (5, 0, 2, 7, 2, 1, 4, 3, 9, 9, 2)
 
 
   printf("\n\n\n==== Verificando a quantidade de ocorrências nas listas ====\n");
@@ -96,8 +96,8 @@ int main (void) {
   printf("Ocorrências do valor 3 na lista 2: %d\n", contaValor(&lista2, 3));
   printf("Ocorrências do valor 9 na lista 2: %d\n", contaValor(&lista2, 9));
   printf("\n");
-  printf("Ocorrências do valor 2 na lista 3: %d\n", contaValor(&lista3, 2));
-  printf("Ocorrências do valor 4 na lista 3: %d\n", contaValor(&lista3, 4));
+  printf("Ocorrências do valor 2 na lista 3: %d\n", contaValor(lista3, 2));
+  printf("Ocorrências do valor 4 na lista 3: %d\n", contaValor(lista3, 4));
 
 
   printf("\n\n==== Remoção de elementos da Lista 1 ====\n");
