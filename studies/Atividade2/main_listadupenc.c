@@ -66,7 +66,7 @@ int main (void) {
   printf("Adicionado elemento 9 no FINAL da Lista 2!\n");
   inserirNoFinal(&lista2, 9); // Lista ( 7, 1, 3, 9 )
 
-  printf("Adicionado elemento 6 no FINAL da Lista 9!\n");
+  printf("Adicionado elemento 9 no FINAL da Lista 2!\n");
   inserirNoFinal(&lista2, 9); // Lista ( 7, 1, 3, 9, 9 )
 
   printf("Adicionado elemento 4 no INÍCIO da Lista 2!\n");
