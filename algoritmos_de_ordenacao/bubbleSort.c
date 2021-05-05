@@ -18,22 +18,21 @@ void bubbleSort(int *v, int N) {
   }
 }
 
+void mostrarLista(int *v, int N) {
+  for (int i = 0; i < N; i++) {
+    printf("%d ", v[i]);
+  }
+
+  printf("\n");
+}
 
 int main() {
 
   int v[] = {9, 8, 7, 6, 5, 4 ,3, 2, 1};
-
-  for (int i = 0; i < 9; i++) {
-    printf("%d ", v[i]);
-  }
-  printf("\n");
-
+  mostrarLista(v, 9);
 
   bubbleSort(v, 9);
-  for (int i = 0; i < 9; i++) {
-    printf("%d ", v[i]);
-  }
-  printf("\n");
+  mostrarLista(v, 9);
   
 
   return 0;
