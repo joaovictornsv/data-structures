@@ -36,11 +36,11 @@
 - [ ] Matriz esparsa
 
 #### Classificação e pesquisa de dados:
-- [ ] Bubble
-- [ ] Inserção
-- [ ] Seleção
+- [x] Bubble
+- [x] Inserção
+- [x] Seleção
 - [ ] Shell
-- [ ] Quick
+- [x] Quick
 - [ ] Busca linear
 - [ ] Pesquisa binária
 - [ ] Árvore binária de busca
