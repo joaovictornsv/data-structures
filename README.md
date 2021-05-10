@@ -136,3 +136,13 @@ Para acessar o código [clique aqui](./projeto_cadastro/main.c).
   
   <img src="./projeto_cadastro/gif.gif" width=600>
 </div>
+---
+<div  align="center">
+
+### :pencil2: Author
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/joaovictornsv"><img src="https://github.com/joaovictornsv.png" width="100px;" alt="Profile"/><br /><sub><b>João Victor</b></sub></a><br /><a href="https://github.com/joaovictornsv" title="Code">💻</a></td>
+  <tr>
+</table>
+ </div>
