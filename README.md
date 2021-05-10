@@ -136,7 +136,9 @@ Para acessar o código [clique aqui](./projeto_cadastro/main.c).
   
   <img src="./projeto_cadastro/gif.gif" width=600>
 </div>
+
 ---
+
 <div  align="center">
 
 ### :pencil2: Author
