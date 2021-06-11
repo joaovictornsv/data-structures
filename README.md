@@ -92,6 +92,18 @@ Assim separamos o "conceito" (definição do tipo) de sua "implementação".
 
 <hr>
 
+## Alocação de memória
+**Alocação estática:**
+- O espaço de memória é alocado no momento da compilação.
+- Exige a definição do número máximo de elementos da "Lista".
+- Acesso sequencial: elementos consecutivos na memória.
+
+**Alocação dinâmica:**
+- O espaço de memória é alocado em tempo de execução.
+- A "Lista" cresce à medida que novos elementos são armazenados, e diminui à medida que elementos são removidos.
+- Acesso encadeado: cada elemento pode estar em uma área distinta da memória. Para acessar um elemento, é preciso percorrer todos os seus antecessores na "Lista".
+<hr>
+
 ## Listas
 Em uma "Lista" podemos realizar as seguintes operações básicas:
 - criação da lista
@@ -105,21 +117,53 @@ Essas operações dependem do tipo de alocação de memória usada:
 - estática
 - dinâmica
 
-**Alocação estática:**
-- O espaço de memória é alocado no momento da compilação.
-- Exige a definição do número máximo de elementos da "Lista".
-- Acesso sequencial: elementos consecutivos na memória.
-
-**Alocação dinâmica:**
-- O espaço de memória é alocado em tempo de execução.
-- A "Lista" crescre à medida que novos elementos são armazenados, e diminui à medida que elementos são removidos.
-- Acesso encadeado: cada elemento pode estar em uma área distinta da memória. Para acessar um elemento, é preciso percorrer todos os seus antecessores na "Lista".
-
 **👉 Listas Implementadas:**
 - [Lista Sequencial](./estrutura_de_dados/ListaSequencial)
 - [Lista Simplesmente Encadeada](./estrutura_de_dados/ListaSimpEncad)
 - [Lista Duplamente Encadeada](./estrutura_de_dados/ListaDuplaEncad)
 - [Lista Encadeada Circular](./estrutura_de_dados/ListaCircular)
+<hr>
+
+## Filas
+Uma "Fila" é um tipo especial de "Lista":
+- Inserções e exclusões de elementos ocorrem nas extremidades da "lista"
+
+Em uma "Fila" podemos realizar as seguintes operações básicas:
+- criação da fila
+- inserção de um elemento no "final"
+- exclusão de um elemento do "início"
+- acesso ao elemento do "início"
+- destruição da fila
+
+Essas operações dependem do tipo de alocação de memória usada:
+- estática
+- dinâmica
+
+**👉 Filas Implementadas:**
+- [Fila Estática](./estrutura_de_dados/FilaEstatica)
+- [Fila Dinâmica](./estrutura_de_dados/FilaDinamica)
+
+<hr>
+
+## Pilhas
+Uma "Pilha" é um tipo especial de "Lista":
+- Inserções e exclusões de elementos ocorrem apenas elementos no início da "lista"
+
+Em uma "Pilha" podemos realizar as seguintes operações básicas:
+- criação da pilha
+- inserção de um elemento no "início"
+- exclusão de um elemento do "início"
+- acesso ao elemento do "início"
+- destruição da pilha
+
+Essas operações dependem do tipo de alocação de memória usada:
+- estática
+- dinâmica
+
+**👉 Pilhas Implementadas:**
+- [Pilha Estática](./estrutura_de_dados/PilhaEstatica)
+- [Pilha Dinâmica](./estrutura_de_dados/PilhaDinamica)
+
 <hr>
 
 ## Programa de cadastro
@@ -139,12 +183,7 @@ Para acessar o código [clique aqui](./projeto_cadastro/main.c).
 
 ---
 
-<div  align="center">
-
-### :pencil2: Author
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/joaovictornsv"><img src="https://github.com/joaovictornsv.png" width="100px;" alt="Profile"/><br /><sub><b>João Victor</b></sub></a><br /><a href="https://github.com/joaovictornsv" title="Code">💻</a></td>
-  <tr>
-</table>
- </div>
+<div>
+  <img align="left" src="https://i.imgur.com/ufUYAFh.png" width=35 alt="Profile"/>
+  <sub>Made with 💙 by <a href="https://github.com/joaovictornsv">João Victor</a></sub>
+</div>
