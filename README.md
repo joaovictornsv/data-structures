@@ -5,9 +5,22 @@
   *Conteúdo retirado do canal [Linguagem C Programação Descomplicada](https://www.youtube.com/channel/UCUc6UwvpQfOLDE7e52-OCMw)*
 </div>
 
-<hr>
+---
 
-## Meu progresso:
+<h2 id="conteudos">Conteúdos</h2>
+
+[➜ Progresso](#purple_circle-progresso)<br>
+[➜ Básico sobre Estrutura de Dados](#purple_circle-básico-sobre-estrutura-de-dados)<br>
+[➜ Alocação de memória](#purple_circle-alocação-de-memória)<br>
+[➜ Listas](#purple_circle-listas)<br>
+[➜ Filas](#purple_circle-filas)<br>
+[➜ Pilhas](#purple_circle-pilhas)<br><br>
+[➜ Programa de cadastro](#purple_circle-programa-de-cadastro)<br>
+
+
+---
+
+## :purple_circle: Progresso:
 <details>
   <summary>
     Conteúdos
@@ -57,7 +70,7 @@
 
 <hr>
 
-## Básico sobre Estrutura de Dados
+## :purple_circle: Básico sobre Estrutura de Dados
 ### ✏ Conceitos
 **Tipo de dado**: define o conjunto de valores (domínio) que uma variável pode assumir.
 
@@ -92,7 +105,7 @@ Assim separamos o "conceito" (definição do tipo) de sua "implementação".
 
 <hr>
 
-## Alocação de memória
+## :purple_circle: Alocação de memória
 **Alocação estática:**
 - O espaço de memória é alocado no momento da compilação.
 - Exige a definição do número máximo de elementos da "Lista".
@@ -104,7 +117,7 @@ Assim separamos o "conceito" (definição do tipo) de sua "implementação".
 - Acesso encadeado: cada elemento pode estar em uma área distinta da memória. Para acessar um elemento, é preciso percorrer todos os seus antecessores na "Lista".
 <hr>
 
-## Listas
+## :purple_circle: Listas
 Em uma "Lista" podemos realizar as seguintes operações básicas:
 - criação da lista
 - inserção de um elemento
@@ -124,7 +137,7 @@ Essas operações dependem do tipo de alocação de memória usada:
 - [Lista Encadeada Circular](./estrutura_de_dados/ListaCircular)
 <hr>
 
-## Filas
+## :purple_circle: Filas
 Uma "Fila" é um tipo especial de "Lista":
 - Inserções e exclusões de elementos ocorrem nas extremidades da "lista"
 
@@ -145,7 +158,7 @@ Essas operações dependem do tipo de alocação de memória usada:
 
 <hr>
 
-## Pilhas
+## :purple_circle: Pilhas
 Uma "Pilha" é um tipo especial de "Lista":
 - Inserções e exclusões de elementos ocorrem apenas elementos no início da "lista"
 
@@ -166,12 +179,12 @@ Essas operações dependem do tipo de alocação de memória usada:
 
 <hr>
 
-## Programa de cadastro
+## :purple_circle: Programa de cadastro
 Esse projeto realiza as seguintes funções:
 
-:white_check_mark: Cadastrar uma pessoa <br/>
-:white_check_mark: Listar pessoas cadastradas<br/>
-:white_check_mark: Deletar uma pessoa<br/>
+✅ Cadastrar uma pessoa <br/>
+✅ Listar pessoas cadastradas<br/>
+✅ Deletar uma pessoa<br/>
 
 Para acessar o código [clique aqui](./projeto_cadastro/main.c).
 <div align="center">
